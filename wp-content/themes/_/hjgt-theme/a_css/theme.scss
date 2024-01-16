@@ -1,0 +1,72 @@
+@import "../bootstrap_theme/custom.scss";
+@import "_global-variables.scss";
+@import "_global-wordpress.scss";
+@import "_global-woocommerce.scss";
+@import "_custom-theme";
+@import "blocks/blocks";
+@import "_gravity-forms";
+
+// Begin Custom Theme SCSS excluded from WP Admin Gutenberg Block Area
+// greensock classes
+.green_none {
+    visibility: hidden;
+}
+
+.site-header {
+    top: 0;
+    z-index: 999999;
+    position: sticky;
+    left: 0;
+}
+
+.site {
+    // Skip to content link
+    a.skip-link {
+        position: fixed;
+        z-index: 1000;
+        top: 0px;
+        right: 0px;
+    }
+
+    #site_content #content:focus {
+        outline: none;
+    }
+
+    /* Make sure embeds and iframes fit their containers. */
+    embed,
+    iframe,
+    object {
+        max-width: 100%;
+    }
+}
+
+#site_content p a,
+.edit-post-visual-editor p a {
+    font-weight: bold
+}
+
+.blog_left_image {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    float: left;
+    max-width: 150px;
+    padding-top: 0.5rem;
+}
+
+#jumbotron_wrapper {
+    border-bottom: 1px solid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+#search_box {
+    margin-bottom: 2rem;
+}
+
+#content #primary article footer.entry-footer {
+    margin-top: 1rem;
+}

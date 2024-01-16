@@ -1,0 +1,56 @@
+@import "_buttons";
+@import "_advancedContainer";
+@import "_apiLoops";
+@import "_blockStyles";
+@import "_blogs";
+@import "_hero1";
+@import "_horizonalTabs";
+@import "_slider";
+@import "_spacer";
+@import "_sectionBackground";
+@import "_flexRow";
+@import "_twoColSection";
+@import "_bulletLists";
+@import "_faq_accordion";
+@import "_mosaic_cards";
+@import "_verticalTabs";
+@import "../footers/footers";
+@import "../headers/headers";
+
+.constrain {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.singleText {
+    a {
+        color: inherit;
+        text-decoration-color: transparent;
+        text-underline-offset: 6px;
+        text-decoration-thickness: 2px;
+        transition: text-decoration 0.3s;
+
+        &:hover {
+            text-decoration-color: $secondary;
+        }
+    }
+}
+
+// Title Block Underline
+.areaTitle {
+    border-bottom: 2px solid $gray-med;
+    padding-bottom: .5rem;
+}
+
+.tb_gb .gbFullWidth {
+    width: 100vw;
+    position: absolute;
+    height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50vw);
+}
+
+.sectionBreak .wrapper {
+    position: relative
+}

@@ -1,0 +1,150 @@
+.verticalNav {
+    @include bp(lg) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        min-height: 350px;
+
+        & > *:not(.wp-block) {
+            grid-column: 1;
+            grid-row: 1;
+            z-index: 2;
+            color: $white;
+            align-self: start;
+        }
+    }
+
+    .subtile {
+        padding: 2rem 1rem 1rem;
+        color: $gray-med;
+        background-color: $white;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+
+    .conWrapper {
+        @include bp(lg) {
+            display: contents;
+        }
+
+        &.active {
+            .linkWrapper a {
+                color: $secondary;
+            }
+
+            .content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &:last-child {
+            .linkWrapper {
+                padding-bottom: 2rem;
+                border-bottom-left-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+
+        .linkWrapper {
+            grid-column: 1;
+            grid-row: 1;
+            z-index: 2;
+            align-self: start;
+            display: flex;
+            background-color: $white;
+
+            @include bp(lg) {
+                &:hover + .content {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            a {
+                color: $black;
+                padding: 1rem 3rem 1rem 0rem;
+                margin: 0 1rem;
+                display: flex;
+                flex-grow: 1;
+                align-items: center;
+                justify-content: space-between;
+                text-transform: uppercase;
+                font-family: industry, sans-serif;
+                font-size: 1.5rem;
+                font-weight: bold;
+                border-bottom: 1px solid $gray-med-light;
+
+                &:hover {
+                    text-decoration: none;
+                    border-color: $secondary;
+                }
+            }
+        }
+
+        .content {
+            grid-row: 1;
+            grid-column: 2;
+            transition: opacity 400ms 100ms;
+            color: $black;
+
+            @include bp(lg) {
+                visibility: collapse;
+                opacity: 0;
+                padding-left: 1rem;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            .contentWrapper {
+                display: grid;
+                border-radius: $border-radius;
+                overflow: hidden;
+                background-color: $white;
+
+                &>* {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+
+                &.hasFeaturedImage {
+                    .innerContent {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        color: $white;
+                    }
+                }
+
+                .featureImg {
+                    display: grid;
+                    z-index: 1;
+                    min-height: 500px;
+                    height: 50vh;
+
+                    &>* {
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+
+                    .overlay {
+                        background: transparent linear-gradient(180deg, #121A2B00 0%, #121A2B 100%) 0% 0% no-repeat;
+                    }
+                }
+
+                .innerContent {
+                    padding: 2rem;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

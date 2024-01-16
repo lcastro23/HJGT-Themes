@@ -1,0 +1,243 @@
+// Create Guetenburg Bullet Color Options
+@each $name, $color in $theme-colors {
+    .bullet-#{$name}-color .svg_wrapper svg {
+        color: $color;
+    }
+}
+
+ul.gb_bulletList li {
+    list-style-type: none;
+    display: flex;
+    break-inside: avoid
+}
+
+ul.gb_bulletList.justCenter li {
+    justify-content: center;
+}
+
+ul.gb_bulletList.justEnd li {
+    justify-content: end;
+}
+
+ul.gb_bulletList li svg {
+    height: 10px;
+    width: 10px;
+    margin-right: 0.25rem;
+    margin-top: -2px
+}
+
+ul.gb_bulletList.lg_font li span {
+    font-size: 1.25rem
+}
+
+ul.gb_bulletList.xl_font li span {
+    font-size: 2rem
+}
+
+ul.gb_bulletList.lg_font li svg {
+    height: 12px;
+    width: 12px
+}
+
+ul.gb_bulletList li .svg_wrapper {
+    display: none
+}
+
+.bullet-1.gb_bulletList li .svg_wrapper.bullet-1 {
+    display: block
+}
+
+.bullet-2.gb_bulletList li .svg_wrapper.bullet-2 {
+    display: block
+}
+
+.bullet-3.gb_bulletList li .svg_wrapper.bullet-3 {
+    display: block
+}
+
+.bullet-4.gb_bulletList li .svg_wrapper.bullet-4 {
+    display: block
+}
+
+.bullet-5.gb_bulletList li .svg_wrapper.bullet-5 {
+    display: block
+}
+
+.bullet-6.gb_bulletList li {
+    padding: .75rem 0;
+    border-bottom: 1px solid $gray-med-light;
+    margin-bottom: unset !important;
+
+    .svg_wrapper.bullet-6 {
+        display: block;
+        margin-right: 1rem;
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+ul.gb_bulletList.lg_font.bullet-1 li .bullet-1 svg {
+    width: 8px;
+    height: 8px
+}
+
+ul.gb_bulletList.lg_font li svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 4px;
+    margin-right: .5rem;
+}
+
+ul.gb_bulletList.xl_font li svg {
+    width: 18px;
+    height: 18px;
+    margin-top: 16px;
+    margin-right: .5rem;
+}
+
+ul.gb_bulletList.xl_font.bullet-1 li .bullet-1 svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 18px;
+    margin-right: .5rem;
+}
+
+ul.gb_bulletList.bullet-1 li .bullet-1 svg {
+    height: 6px;
+    width: 6px
+}
+
+ul.gb_bulletList.ul_indent-none {
+    padding-left: 0
+}
+
+ul.gb_bulletList.ul_indent-1 {
+    padding-left: 1rem;
+    margin-bottom: 0
+}
+
+ul.gb_bulletList.ul_indent-2 {
+    padding-left: 2rem
+}
+
+ul.gb_bulletList.norm_font li {
+    margin-bottom: 0.5rem
+}
+
+ul.gb_bulletList li {
+    margin-bottom: 0.75rem
+}
+
+ul.gb_bulletList.ul_cols-2 {
+    columns: 2
+}
+
+@media (min-width:576px) {
+    ul.gb_bulletList.ul_cols-sm-2 {
+        columns: 2
+    }
+}
+
+@media (min-width:768px) {
+    ul.gb_bulletList.ul_cols-md-2 {
+        columns: 2
+    }
+}
+
+@media (min-width:992px) {
+    ul.gb_bulletList.ul_cols-lg-2 {
+        columns: 2
+    }
+}
+
+@media (min-width:1200px) {
+    ul.gb_bulletList.ul_cols-xl-2 {
+        columns: 2
+    }
+}
+
+ul.gb_bulletList.ul_cols-3 {
+    columns: 3
+}
+
+@media (min-width:576px) {
+    ul.gb_bulletList.ul_cols-sm-3 {
+        columns: 3
+    }
+}
+
+@media (min-width:768px) {
+    ul.gb_bulletList.ul_cols-md-3 {
+        columns: 3
+    }
+}
+
+@media (min-width:992px) {
+    ul.gb_bulletList.ul_cols-lg-3 {
+        columns: 3
+    }
+}
+
+@media (min-width:1200px) {
+    ul.gb_bulletList.ul_cols-xl-3 {
+        columns: 3
+    }
+}
+
+ul.gb_bulletList.ul_cols-4 {
+    columns: 4
+}
+
+ul.gb_bulletList.ul_cols-sm-4 {
+    columns: 2;
+
+    @media (min-width:576px) {
+        columns: 4
+    }
+}
+
+ul.gb_bulletList.ul_cols-md-4 {
+    @media (min-width:576px) {
+        columns: 2
+    }
+
+    @media (min-width:768px) {
+        columns: 4
+    }
+}
+
+ul.gb_bulletList.ul_cols-lg-4 {
+    @media (min-width:576px) {
+        columns: 2
+    }
+
+    @media (min-width:768px) {
+        columns: 3
+    }
+
+    @media (min-width:992px) {
+        columns: 4
+    }
+}
+
+ul.gb_bulletList.ul_cols-xl-4 {
+    @media (min-width:576px) {
+        columns: 2
+    }
+
+    @media (min-width:992px) {
+        columns: 3
+    }
+
+    @media (min-width:1200px) {
+        columns: 4
+    }
+}
+
+ul.gb_bulletList.unbreak_li_list li {
+    break-inside: auto !important
+}
+

@@ -1,0 +1,85 @@
+{
+    "version": 2,
+    "settings": {
+        "typography": {
+            "fontSizes": [
+                {
+                    "name": "Small",
+                    "slug": "small",
+                    "size": "0.875rem"
+                },
+                {
+                    "name": "Normal",
+                    "slug": "normal",
+                    "size": "1rem"
+                },
+                {
+                    "name": "L H4",
+                    "slug": "large",
+                    "size": "1.5rem"
+                },
+                {
+                    "name": "XL H3",
+                    "slug": "x-large",
+                    "size": "2rem"
+                },
+                {
+                    "name": "XXL H2",
+                    "slug": "xx-large",
+                    "size": "2.5rem"
+                }
+            ],
+            "fontSizes": [
+				{
+					"slug": "small",
+					"size": "0.875rem",
+					"name": "Small"
+				},
+                {
+					"slug": "medium",
+					"size": "1.25rem",
+					"name": "Medium"
+				},
+                {
+					"slug": "large",
+					"size": "1.5rem",
+					"name": "Large"
+				},
+                {
+					"slug": "xlarge",
+					"size": "2rem",
+					"name": "X Large"
+				},
+                {
+					"slug": "xxlarg",
+					"size": "3.5rem",
+					"name": "XX Large H1"
+				}
+			],
+            "fontFamilies": [
+				{
+					"fontFamily": "Lato",
+					"slug": "lato",
+					"name": "Lato"
+				},
+				{
+					"fontFamily": "industry, sans-serif",
+					"slug": "industry",
+					"name": "Industry (Headings)"
+				}
+			]
+		}
+    },
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	]
+}

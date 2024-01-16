@@ -1,0 +1,2 @@
+<nav <?php if(empty($_GET['context']) || $_GET['context'] !== 'edit') echo get_block_wrapper_attributes( array('class' => "quickLinks", ) ); else echo 'data-wp-block-props="true"'; ?>> <a href="<?php echo get_theme_mod( 'contact_info_membership', 'link' ); ?>" target="_blank"><?php _e( 'Join HJGT', 'tb_theme' ); ?></a> <a href="<?php echo get_theme_mod( 'contact_info_schedule', 'link' ); ?>" target="_blank"><?php _e( 'Schedule', 'tb_theme' ); ?></a> <a href="<?php echo get_theme_mod( 'contact_info_login', 'link' ); ?>"><?php _e( 'Login', 'tb_theme' ); ?></a> 
+</nav>

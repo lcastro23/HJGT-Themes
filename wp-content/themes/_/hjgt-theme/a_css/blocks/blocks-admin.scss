@@ -1,0 +1,110 @@
+@import "../_global-variables.scss";
+@import "../../bootstrap_theme/custom.scss";
+
+.components-resizable-box__container {
+    min-height: 100%;
+}
+
+.editor-styles-wrapper {
+    @import "../../bootstrap_theme/bootstrap-base.scss";
+    @import "blocks.scss";
+    @import "../_global-wordpress";
+
+    .menu-item-has-children .sub-menu {
+        display: none;
+    }
+
+    .faq_wrapper {
+        .faq_swipe {
+            display: none;
+        }
+
+        .faq_a {
+            height: 100%;
+        }
+    }
+
+    .advancedContainer {
+        grid-template-columns: 1fr;
+
+        > * {
+            grid-column: 1/1 !important;
+        }
+    }
+
+    .verticalNav {
+        grid-template-columns: 1fr;
+
+        .conWrapper {
+            display: grid;
+            height: auto;
+
+            > .content {
+                grid-row: 2/3 !important;
+                grid-column: 1/2 !important;
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                margin-top: 0;
+            }
+        }
+
+        .linkWrapper {
+            grid-column: 1/2 !important;
+            grid-row: 1/2 !important;
+
+            a {
+                color: $black !important;
+            }
+        }
+    }
+}
+
+:root {
+    @each $color, $value in $theme-colors {
+        --#{$color}: #{$value};
+    }
+}
+
+// _flexRow fix
+.flexRow .flexRowContainer>* {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+// admin styles
+[class*="wp-block-tb-theme-"] {
+    border: 1px solid transparent;
+}
+
+[class*="wp-block-tb-theme-"]:hover {
+    border: 1px dashed gray;
+}
+
+.wp-block {
+    max-width: 100%;
+}
+
+.wp-block-wp-bootstrap-blocks-container {
+    margin: 0 auto;
+
+    @include bp(sm) {
+        max-width: 540px;
+    }
+
+    @include bp(md) {
+        max-width: 720px;
+    }
+
+    @include bp(lg) {
+        max-width: 960px;
+    }
+
+    @include bp(xl) {
+        max-width: 1140px;
+    }
+
+    @include bp(xxl) {
+        max-width: 1340px;
+    }
+}
