@@ -1,0 +1,15 @@
+# Exclude WordPress core files
+wp-admin/
+wp-includes/
+wp-config.php
+
+# Exclude plugin files (except custom ones)
+wp-content/plugins/*
+!wp-content/plugins/your-custom-plugin/
+
+# Exclude uploads and cache
+wp-content/uploads/
+wp-content/cache/
+
+# Exclude specific files
+database.sql
